@@ -12,6 +12,8 @@ class DekstopScreen extends StatefulWidget {
 }
 
 class _DekstopScreenState extends State<DekstopScreen> {
+  ScrollController _scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,18 +26,24 @@ class _DekstopScreenState extends State<DekstopScreen> {
             child: Column(
               children: [
                 AspectRatio(
-                  aspectRatio: 4,
+                  aspectRatio: 3,
                   child: SizedBox(
+                    height: 200,
                     width: double.infinity,
-                    child: GridView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 4),
-                      itemCount: 4,
-                      itemBuilder: (context, index) {
-                        return const MyBox();
-                      },
+                    child: Scrollbar(
+                      thumbVisibility: true,
+                      controller: _scrollController,
+                      child: GridView.builder(
+                        controller: _scrollController,
+                        scrollDirection: Axis.horizontal,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 1),
+                        itemCount: 6,
+                        itemBuilder: (context, index) {
+                          return const MyBox();
+                        },
+                      ),
                     ),
                   ),
                 ),

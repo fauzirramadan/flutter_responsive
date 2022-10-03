@@ -15,32 +15,56 @@ var myDrawer = Drawer(
             backgroundColor: Colors.grey[600],
             child: const Icon(Icons.favorite)),
       ),
-      const Padding(
+      Padding(
         padding: paddingTile,
-        child: ListTile(
-          leading: Icon(Icons.home),
-          title: Text("DASHBOARD"),
+        child: Card(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          color: Colors.white.withOpacity(0.8),
+          elevation: 0,
+          child: const ListTile(
+            leading: Icon(Icons.home),
+            title: Text("DASHBOARD"),
+          ),
         ),
       ),
-      const Padding(
+      Padding(
         padding: paddingTile,
-        child: ListTile(
-          leading: Icon(Icons.settings),
-          title: Text("SETTINGS"),
+        child: Card(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          color: Colors.white.withOpacity(0.8),
+          elevation: 0,
+          child: const ListTile(
+            leading: Icon(Icons.settings),
+            title: Text("SETTINGS"),
+          ),
         ),
       ),
-      const Padding(
+      Padding(
         padding: paddingTile,
-        child: ListTile(
-          leading: Icon(Icons.notes),
-          title: Text("ABOUT"),
+        child: Card(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          color: Colors.white.withOpacity(0.8),
+          elevation: 0,
+          child: const ListTile(
+            leading: Icon(Icons.notes),
+            title: Text("ABOUT"),
+          ),
         ),
       ),
-      const Padding(
+      Padding(
         padding: paddingTile,
-        child: ListTile(
-          leading: Icon(Icons.logout),
-          title: Text("LOG OUT"),
+        child: Card(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          color: Colors.white.withOpacity(0.8),
+          elevation: 0,
+          child: const ListTile(
+            leading: Icon(Icons.logout),
+            title: Text("LOG OUT"),
+          ),
         ),
       )
     ],
